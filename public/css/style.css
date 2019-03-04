@@ -1,0 +1,810 @@
+/* STYLE PAGE CONNEXION LEENK, TEST NUMERO 1 */
+*{
+    margin:0;
+    padding:0
+}
+
+
+
+main{
+    width:100%;
+    background-size:cover;
+
+    padding-top:3%;
+}
+.login_padding{
+    padding-top:15%;
+}
+
+#nav_bar{
+    height:100px;
+    background-image:url('../ressources/banner/banner.png');
+    border-bottom:1px solid #4B26C6;
+    background-size:cover;
+    padding-top:1%;
+}
+#nav_bar_index{
+    height:100px;
+    background-image:url('../ressources/banner/banner.png');
+    border-bottom:1px solid #4B26C6;
+    background-size:cover;
+    padding-top:1%;
+    position:fixed;
+    z-index:5000;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+
+}
+
+#nav_bar_index_responsive{
+   
+    display:flex;
+     position:fixed; 
+    justify-content: space-between; 
+     width:100%;
+     background-image:url('../ressources/banner/banner.png');
+     z-index:10000;
+      display:none;
+}
+.leenk_burger_responsive{
+    width:100%;
+    color:white;
+    padding-top: 30px;
+}
+.menu_img_responsive{
+
+max-width:150px;
+}
+
+.menu_img_responsive>img{
+    width:100%;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+color:rgb(255,255,255,.5);
+}
+/**
+ *
+ * CSS BURGER BOOSTRAP ANIMATED ICONS
+ *
+ */
+
+ 
+.animated-icon1{
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    }
+    
+    .animated-icon1 span{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    }
+    
+    .animated-icon1 span {
+    background: #3CC0F3;
+    }
+    .animated-icon1 span:nth-child(1) {
+    top: 0px;
+    }
+    
+    .animated-icon1 span:nth-child(2) {
+    top: 10px;
+    }
+    
+    .animated-icon1 span:nth-child(3) {
+    top: 20px;
+    }
+    
+    .animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    }
+    
+    .animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+    }
+    
+    .animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    }
+    
+/**
+ *
+ * CSS BURGER BOOSTRAP
+ *
+ */
+
+
+.nav{
+    margin-right:10%;
+    line-height:20px;
+    margin-top:10px;
+}
+.nav-item >a{
+    color:white;
+}
+
+
+
+#logo_nav_position {
+ 
+        width:250px;
+        height:70px;
+        margin-left:5%;
+        margin-top:-0.5%;
+
+        text-align:center;
+     
+}
+
+#logo_position{
+    width:250px;
+    height:70px;
+    margin:0.2% auto 0 auto;
+    text-align:center;
+
+}
+.title_form{
+    margin:5% auto 3% auto;
+    color:#4B26C6;
+
+}
+.form_style label{
+    width:50%;
+    margin-bottom:0%;
+    color:rgb(50,50,50);
+    line-height: 40px;
+    height:40px;
+
+}
+#question_form_sub{
+    width:100%;
+}
+.form_style input[type="text"],input[type="date"],input[type="password"],input[type="email"]{
+    width:100%;
+}
+.form_input_login{
+    width:90%;
+    margin-bottom: 5%;
+
+}
+.btn_login{
+    margin-bottom:5%;
+    width:50%;
+    background:#4B26C6;
+    border:1px solid rgb(50,50,50);
+    border-radius:15px;
+    padding:5px 5px;
+    color:white;
+    cursor:pointer;
+    /* background-image: url('./Logo/banner.png'); */
+}
+
+.btn_login:hover{
+    background-color:#5728F2;
+    color:white;
+    background-image:none;
+    transform:translateX("10px");
+
+}
+#style_link_register{
+    width:100%;
+    text-decoration:none;
+}
+
+.form_style {
+    width: 18%;
+
+    margin: 3% auto 10% auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.second{
+    margin:5% auto 0 auto;
+
+}
+
+.height_class {
+    height:30px;
+    border-radius:15px;
+    border:1px solid #4B26C6;
+    padding-left:15px;
+}
+
+
+/*=============================================
+=           MAIN_INDEX comment block            =
+=============================================*/
+
+
+#content_index{
+    width:100%;
+    height:400px;
+}
+#alert_box_home{
+    width:60%;
+    margin:5% auto 0 auto;
+    overflow:auto;
+    height:250px;
+}
+#form_search_bar{
+    display:flex;
+    flex-wrap: wrap;
+}
+#search_part{
+    height:200px;
+    display:flex;
+    justify-content: center;
+    background-image:url('../ressources/banner/banner.png');
+    background-size:cover;
+    padding-top:130px;
+}
+.search_bar{
+    height:30px;
+    width:100%;
+    border-radius:15px;
+    padding-left:10px;
+}
+#submit_search_bar{
+    height:30px;
+    margin-left:5px; 
+}
+#submit_form_search_bar{
+    width:20%;
+}
+.search_submit{
+    border:none;
+    background:none;
+    cursor: pointer;
+}
+.label_input_search_form{
+    color:white;
+    margin-right:5px;
+    height:1px;
+}
+.input_search_form{
+    margin-right:20px;
+}
+.fa-search{
+    height:30px;
+    font-size:1.5rem;
+    color:white;
+    margin-left:5px;
+    margin-top:2px;
+}
+#part_01{
+    width:100%;
+    margin-bottom:5%;
+}
+
+
+#part_02{
+    background:linear-gradient(0.25turn,#3B334F,#623AED);
+    height:400px;
+    text-align: center;
+}
+#part_02 >p {
+    padding-top:7%;
+    font-size:48px;
+    color:white;
+    font-style:italic;
+    display:none;
+}
+
+#part_03{
+    padding-top:2%;
+    position:relative;
+    height:600px;
+    display:flex;
+}
+#img_part03{
+    width:50%;
+}
+#text_part03{
+    width:10%;
+    display:none;
+}
+#animate_sphone{
+    position:relative;
+    left:-300px;
+
+}
+#part_04{
+    width:100%;
+    text-align: center;
+}
+#card_handler{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.style_link_leenk{
+    text-decoration: none;
+    background-color:#4B26C6;
+    color:white;
+    padding:7px 7px;
+    border:1px solid #4B26C6;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+.style_link_leenk:hover{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+.block_link_leenk{
+    margin-bottom:20px;
+}
+/*=============================================
+=            EFFECT ON CARDS            =
+=============================================*/
+
+.card_leenk-effect {
+    display: flex;
+    flex-wrap:wrap;
+
+  }
+  
+  .card_leenk {
+    position: relative;
+    overflow: hidden;
+    width: 230px;
+    height:340px;
+    margin-right:12.5px;
+    margin-left:25px;
+    margin-bottom:20px;
+  }
+  .card_leenk img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 200%;
+    max-height: 200%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .card_leenk__info {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2 * 7px);
+    height: calc(100% - 2 * 7px);
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+  }
+  
+  .card_leenk__header {
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 15px 0;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .card_leenk__header:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: '';
+    background-color: #8D909B;
+  }
+  
+  .card_leenk__links {
+    display: flex;
+  }
+  
+  .card_leenk__link-block {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+  .card_leenk__link-block:last-child {
+    margin-right: 0;
+  }
+  
+  .card_leenk__link {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #101010;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .card_leenk__link:hover{
+      text-decoration: none;
+  }
+
+  .card_leenk_fas{
+      color:black;
+  }
+  .card_leenk_fas_size{
+      font-size:24px;
+  }
+  .card_leenk_fas:hover{
+      color:black;
+      text-decoration: none;
+  }
+
+.card_leenk-hover .card_leenk__info {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0;
+  }
+  .card_leenk-hover .card_leenk__header {
+    top: -10px;
+    opacity: 0;
+  }
+  .card_leenk-hover .card_leenk__header:after {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  .card_leenk-hover .card_leenk__link-block {
+    top: 20px;
+    opacity: 0;
+  }
+  
+  .card_leenk-hover:hover .card_leenk__info {
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .card_leenk-hover:hover .card_leenk__header {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0.45s;
+    top: 0;
+    opacity: 1;
+  }
+  .card_leenk-hover:hover .card_leenk__header:after {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.63, 0.01, 0, 1.39);
+    transition-delay: 0.65s;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .card_leenk-hover:hover .card_leenk__link-block {
+    top: 0;
+    opacity: 1;
+  }
+  .card_leenk-hover:hover .card_leenk__link-block:first-child {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0.85s;
+  }
+  .card_leenk-hover:hover .card_leenk__link-block:nth-child(2) {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0.95s;
+  }
+  
+
+/*=====  End of EFFECT ON CARDS  ======*/
+
+#title_main_index{
+    color:#252525;
+    text-align: center;
+    text-decoration: underline;
+    width:100%;
+    font-weight:bold;
+
+}
+
+#more_games{
+
+    transition: transform .3s ease-out;
+    display:inline-block;
+}
+#more_games:hover{
+    transform: translate(0,-10px);
+}
+#more_games .fa-plus-circle{
+    font-size:35px;
+    color:#4B26C6;
+}
+
+/*=====  End of MAIN_INDEX comment block  ======*/
+
+/*=====  START PROFIL PAGE  ======*/
+
+#profil_main{
+    padding-top:5%;
+    padding-left:5%;
+    display:flex;
+    flex-wrap:wrap;
+} 
+
+#profil_main_otherView{
+    padding-top:10%;
+    padding-left:5%;
+    display:flex;
+    flex-wrap:wrap;
+} 
+#profil_main_otherView>div>h1{
+    text-align:center;
+    width:100%;
+    display:block;
+}
+#profil_main>div>h1{
+    text-align:center;
+    width:100%;
+    display:block;
+}
+#title_userView{
+    display:block;
+    width:100%;
+}
+#box_profilReview{
+    width:15%;
+    height:400px;
+    border:1px solid #4B26C6;
+    margin-bottom:2%;
+}
+#img_profil{
+    margin:5% auto;
+    width:25%;
+    display:block;
+}
+#name_user_profil{
+    font-size:24px;
+    font-weight:bold;
+    text-align: center;
+}
+#type_user_profil{
+    font-size:18px;
+    font-weight:bold;
+    text-align: center;
+}
+#user_games{
+    width:100%;
+    margin:0 5% 3% auto;
+    border: 1px solid #4B26C6;
+    display:flex;
+    flex-wrap:wrap;
+}
+#user_fav_games{
+    width:100%;
+    margin:0 5% 3% auto;
+    border: 1px solid #4B26C6;
+    display:flex;
+    flex-wrap:wrap;
+}
+#title_game_box{
+    font-weight:bold;
+    width:100%;
+}
+#post_user{
+    width:59%;
+    border:1px solid #4B26C6;
+    margin-left:3%;
+    height:400px;
+    margin-right:3%;
+}
+#sidebar_right{
+    border:1px solid #4B26C6;
+    width:15%;
+    height:400px;
+}
+/* ===================== GAME VIEW STYLE ======================== */
+#game_view{
+    padding-top:125px;
+    display:flex;
+    flex-wrap:wrap;
+    width:80%;
+    margin:0 auto 2% auto;
+}
+
+#game_title_view{
+    width:100%;
+    font-size:24px;
+    text-align: center;
+}
+#game_img_view{
+    width:15%;
+
+}
+#game_img_view>img{
+    width:100%;
+}
+#game_desc_view{
+    width:75%;
+    margin:1% auto 0 auto;
+}
+#who_plays_it_box{
+    width:80%;
+    border: 1px solid #4B26C6;
+    margin:0 auto 5% auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+#title_WPI{
+    font-size:20px;
+    width:100%;
+}
+#btn_add_game_view{
+    display:block;
+    width:80%;
+    margin: 0 auto 1% auto;
+    padding-left:1%;
+}
+#who_plays_it{
+    width:15%;
+    border: 1px solid #4B26C6;
+    padding:5px 5px;
+    margin:0 5px 10px 5px;
+    text-align: center;
+    text-decoration:none;
+}
+/* ===================== END GAME VIEW STYLE ======================== */
+
+/* ===================== FOOTER STYLE ======================== */
+
+footer{
+    background-color:rgb(20,20,20);
+}
+
+#text_footer{
+    color:white;
+    width:50%;
+    text-align: center;
+    margin:0 auto;
+}
+.content_part_footer{
+    margin-left:5%;
+    text-align: center;
+}
+.title_footer_content{
+    color:white;
+}
+
+/* ====================== END FOOTER STYLE ==================== */
+
+
+
+/* ======================= TEST SEARCH ========================== */
+
+#test_search{
+    padding-top:10%;
+    width:30%;
+    display:flex;
+    margin:0 auto;
+}
+
+/* ======================= END TEST SEARCH ======================== */
+
+/* ======================== GAME LIST ============================= */
+
+#game_list_mainbox{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    text-align: center;
+}
+#title_game_list{
+    width:100%;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 2000px){
+
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #nav_bar_index{
+        display:none;
+    }
+    #nav_bar_index_responsive{
+        display:block;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #nav_bar_index{
+        display:none;
+    }
+    #nav_bar_index_responsive{
+        display:block;
+    }
+}  
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #nav_bar_index{
+        display:none;
+    }
+    #nav_bar_index_responsive{
+        display:block;
+    }
+}  
+
+
+@media screen and (max-width: 576px){
+    #nav_bar_index{
+        display:none;
+    }
+    #nav_bar_index_responsive{
+        display:block;
+    }
+}  
+
+
+
+@media screen and (max-width: 415px){
+    #nav_bar_index{
+        display:none;
+    }
+    #nav_bar_index_responsive{
+        display:block;
+    }
+}   
+
+ 
+ 
+  
