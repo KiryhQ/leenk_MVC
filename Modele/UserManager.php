@@ -9,7 +9,15 @@ use \Leenk\Modele\Manager;
 
 class UserManager extends Manager
 {
+    public function checkingValidUsername($nickname){
+        $db=$this->dbConnect();
+        $req=$db->prepare('SELECT * FROM user where nickname_user = :nickname');
+        $req->execute(array(
+            "nickname" => $nickname
+        ));
 
+        return $req;
+    }
     public function subscribing($param1, $param2, $param3,$param4,$param5){
    
             $db = $this->dbConnect();
@@ -133,5 +141,109 @@ class UserManager extends Manager
                            INNER join games ON games.id_game=favorite.id_game');
         
         return $req;
+    }
+    public function updateProfil($param){
+       
+            $db = $this->dbConnect();
+            $req = $db->prepare('SELECT * FROM user WHERE nickname_user =:nom');
+            $req->execute(array(
+                "nom" => $param
+            ));
+            
+            return $req;
+    }
+    public function confirmUpdateProfil($param1,$param2,$param3,$param4,$param5,$param6){
+        $db= $this->dbConnect();
+        $req=$db->prepare('UPDATE user set nickname_user=(:nickname), email_user=(:email), typeOf_user=(:typeOf), steamId_user=(:steamId), avatar_user=(:img) WHERE nickname_user=(:nickname2)');
+        $req->execute(array(
+            "nickname" => $param1,
+            "email" => $param2,
+            "typeOf" => $param3,
+            "steamId" => $param4,
+            "nickname2"=> $param5,
+            "img" => $param6
+           
+        ));
+
+        return $req;
+    }
+    public function modifyPassword($param, $param2){
+        $db= $this->dbConnect();
+        $req=$db->prepare('UPDATE user set pwd_user=(:pwd) WHERE nickname_user=(:nickname2)');
+        $req->execute(array(
+            "pwd" => $param,
+            "nickname2"=> $param2
+        
+        ));
+    }
+    public function updateBgProfilPage($id,$nickname){
+        $db= $this->dbConnect();
+        if($id == 1){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg1.png',
+                "nickname"=> $nickname
+            ));
+
+        }
+        elseif($id == '2'){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg2.jpg',
+                "nickname"=> $nickname
+            ));
+        }
+        elseif($id == '3'){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg3.jpg',
+                "nickname"=> $nickname
+            ));
+        }
+        elseif($id == '4'){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg4.jpg',
+                "nickname"=> $nickname
+            ));
+        }
+        elseif($id == '5'){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg5.jpg',
+                "nickname"=> $nickname
+            ));
+        }
+        elseif($id == '6'){
+            $req=$db->prepare('UPDATE user set bg_profil_user=(:img) WHERE nickname_user=(:nickname)');
+            $req->execute(array(
+                "img" => 'public/ressources/banner_profil/bg6.jpg',
+                "nickname"=> $nickname
+            ));
+        }
+
+    }
+    public function recoveryPwd($token,$email){
+        $db= $this->dbConnect();
+        $req=$db->prepare('UPDATE user set token_pwd=(:token) WHERE email_user=(:email)');
+        $req->execute(array(
+            "token" => $token,
+            "email"=> $email
+        
+        ));
+    }
+    public function updatePwdFinal($pwd,$token){
+        $db= $this->dbConnect();
+        $req=$db->prepare('UPDATE user set pwd_user=(:pwd) WHERE token_pwd=(:token)');
+        $req->execute(array(
+            "pwd"=> $pwd,
+            "token" => $token
+        ));
+
+        $req=$db->prepare('UPDATE user set token_pwd=(:defaultToken) WHERE token_pwd=(:token)');
+        $req->execute(array(
+            "defaultToken"=> "defaultToken",
+            "token" => $token
+        ));
     }
 }

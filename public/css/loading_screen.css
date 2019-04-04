@@ -97,12 +97,12 @@
 
     #loader-wrapper .loader-section.section-left {
         left: 0;
-                background: linear-gradient(0.25turn,#3B334F,#623AED);
+                background:linear-gradient(0.25turn,#ffb500,#ff8f00);
     }
 
     #loader-wrapper .loader-section.section-right {
         right: 0;
-        background: linear-gradient(0.75turn,#3B334F,#623AED);
+        background:linear-gradient(0.75turn,#ffb500,#ff8f00);
     }
 
     /* Loaded */

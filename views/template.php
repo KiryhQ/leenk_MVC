@@ -2,18 +2,21 @@
 <html lang="en">
 
 <head>
+<base href="http://localhost/Leenk/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+    
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style_preindex.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/loading_screen.css">
     <link rel="stylesheet" href="public/css/easy-autocomplete.themes.min.css">
     <link rel="stylesheet" href="public/css/easy-autocomplete.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
     <script src="public/js/jquery.3.3.1.min.js"></script>
     <script src="public/js/jquery.easy-autocomplete.min.js"></script>
     <script src="public/js/loading_screen.js"></script>
@@ -21,40 +24,39 @@
     <script src="public\js\bootstrap.min.js"></script>
     <title><?=$title?></title>
 </head>
-
 <body>
 
     <div id="nav_bar_index">
         <nav class="navbar navbar-light" id="logo_nav_position">
-            <a class="navbar-brand" href="index.php"><img src="./public/ressources/image/leenk3.png" width="100%"
+            <a class="navbar-brand" href="app/appLeenk"><img src="./public/ressources/image/leenk3.png" width="100%"
                     alt="logo Leenk"></a>
         </nav>
         <ul class="nav justify-content-end">
 
 
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Accueil</a>
+                <a class="nav-link" href="app/appLeenk">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#animate_sphone">A propos</a>
-            </li>
+                        <a class="nav-link color_link_responsive" href="index.php">A propos</a>
+                    </li>
 
             <?php if (!isset($_SESSION['user'])) {
     ?>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=subscribe">Leenkez-vous</a>
+                <a class="nav-link" href="app/subscribe">Leenkez-vous</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=connect">Connexion</a>
+                <a class="nav-link" href="app/connect">Connexion</a>
             </li>
             <?php
 } else {
     ?>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=checkMyProfil">Mon Profil</a>
+                <a class="nav-link" href="app/checkMyProfil">Mon Profil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=logOut">Deconnexion</a>
+                <a class="nav-link" href="app/logOut">Deconnexion</a>
             </li>
             <?php
 }
@@ -87,28 +89,28 @@
                 <!-- Links -->
                 <ul class="navbar-nav mr-auto bg_color_responsive">
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="index.php">Accueil</a>
+                        <a class="nav-link color_link_responsive" href="app/appLeenk">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="#animate_sphone">A propos</a>
+                        <a class="nav-link color_link_responsive" href="index.php">A propos</a>
                     </li>
 
                     <?php if (!isset($_SESSION['user'])) {
     ?>
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="index.php?action=subscribe">Leenkez-vous</a>
+                        <a class="nav-link color_link_responsive" href="app/subscribe">Leenkez-vous</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="index.php?action=connect">Connexion</a>
+                        <a class="nav-link color_link_responsive" href="app/connect">Connexion</a>
                     </li>
                     <?php
 } else {
     ?>
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="index.php?action=checkMyProfil">Mon Profil</a>
+                        <a class="nav-link color_link_responsive" href="app/checkMyProfil">Mon Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_link_responsive" href="index.php?action=logOut">Deconnexion</a>
+                        <a class="nav-link color_link_responsive" href="app/logOut">Deconnexion</a>
                     </li>
                     <?php
 }
@@ -137,7 +139,7 @@
 
 
     <div id="search_part">
-        <form id="form_search_bar" action="index.php?action=searchGame" method="post">
+        <form id="form_search_bar" action="app/searchGame" method="post">
             <input id="basics" class="search_bar" name="searchbar" />
             <button type="submit" class="fas fa-search search_submit"></button>
         </form>
@@ -177,13 +179,13 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">JDR, MinoCrea 2019</a>
+                            <a href="#!">Ravenest</a>
                         </li>
                         <li>
-                            <a href="#!">Med It Easy, David</a>
+                            <a href="https://www.mediteasy.fr">Med It Easy, David</a>
                         </li>
                         <li>
-                            <a href="#!">Projet 3</a>
+                            <a href="https://www.KidsBreizhBirthday.fr">KidsBreizhBirthday, Nicolas</a>
                         </li>
                         <li>
                             <a href="#!">Projet 4</a>
@@ -284,6 +286,13 @@ $("#basics").easyAutocomplete(options);
         });
       
     });
+
+
+
+    /* hover on cards */
+
+ 
+
     </script>
 </body>
 

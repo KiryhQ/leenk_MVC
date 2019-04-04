@@ -1,33 +1,40 @@
 /* STYLE PAGE CONNEXION LEENK, TEST NUMERO 1 */
 *{
-    margin:0;
-    padding:0
+    margin:0;   
+    padding:0;
 }
 
 
+/*=============================================
+=            A RANGER      =
+=============================================*/
 
+
+
+
+
+
+body{
+    background:rgb(20,20,20);
+   
+}
 main{
     width:100%;
     background-size:cover;
-
     padding-top:3%;
-}
-.login_padding{
-    padding-top:15%;
 }
 
 #nav_bar{
     height:100px;
-    background-image:url('../ressources/banner/banner.png');
-    border-bottom:1px solid #4B26C6;
-    background-size:cover;
+    background:linear-gradient(1.1turn,#ffb500,#ff8f00);
+   
     padding-top:1%;
 }
 #nav_bar_index{
     height:100px;
-    background-image:url('../ressources/banner/banner.png');
-    border-bottom:1px solid #4B26C6;
-    background-size:cover;
+    background:linear-gradient(1.1turn,#ffb500,#ff8f00);
+
+
     padding-top:1%;
     position:fixed;
     z-index:5000;
@@ -43,7 +50,7 @@ main{
      position:fixed; 
     justify-content: space-between; 
      width:100%;
-     background-image:url('../ressources/banner/banner.png');
+     background:linear-gradient(1.1turn,#ffb500,#ff8f00);
      z-index:10000;
       display:none;
 }
@@ -158,13 +165,16 @@ color:rgb(255,255,255,.5);
 }
 .nav-item >a{
     color:white;
+    font-weight:bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
 
 #logo_nav_position {
  
-        width:250px;
+        width:320px;
         height:70px;
         margin-left:5%;
         margin-top:-0.5%;
@@ -172,7 +182,9 @@ color:rgb(255,255,255,.5);
         text-align:center;
      
 }
-
+.border_form{
+    border-right:1px solid #ff8f00
+}
 #logo_position{
     width:250px;
     height:70px;
@@ -182,7 +194,7 @@ color:rgb(255,255,255,.5);
 }
 .title_form{
     margin:5% auto 3% auto;
-    color:#4B26C6;
+    color:#ff8f00;
 
 }
 .form_style label{
@@ -193,22 +205,27 @@ color:rgb(255,255,255,.5);
     height:40px;
 
 }
-#question_form_sub{
+.label_form_sub{
     width:100%;
 }
-.form_style input[type="text"],input[type="date"],input[type="password"],input[type="email"]{
-    width:100%;
+input[type="text"],input[type="date"],input[type="password"],input[type="email"]{
+    width:250px;
+    margin-bottom:5%;
 }
 .form_input_login{
     width:90%;
     margin-bottom: 5%;
 
 }
+.login_padding{
+    height:60vh;
+}
 .btn_login{
     margin-bottom:5%;
     width:50%;
-    background:#4B26C6;
-    border:1px solid rgb(50,50,50);
+    background:#ff8f00;
+    border:1px solid #ff8f00;
+    box-shadow:0px 2px 1px black;
     border-radius:15px;
     padding:5px 5px;
     color:white;
@@ -217,15 +234,33 @@ color:rgb(255,255,255,.5);
 }
 
 .btn_login:hover{
-    background-color:#5728F2;
+    background-color:#ff8f00;
+    border:1px solid #ff8f00;
     color:white;
     background-image:none;
     transform:translateX("10px");
 
 }
+.login_input{
+    width:285px !important;
+    margin:3% auto;
+}
+.form_login_main{
+    margin-top:5%;
+}
+.login_form{
+    flex-wrap:wrap;
+    width:30%;
+
+}
+.login_form .btn_login{
+    margin:0 auto 3% auto;
+}
 #style_link_register{
+    display:block;
     width:100%;
     text-decoration:none;
+    text-align: center;
 }
 
 .form_style {
@@ -237,17 +272,21 @@ color:rgb(255,255,255,.5);
     text-align: center;
 }
 
-.second{
+.second_submit{
     margin:5% auto 0 auto;
-
+    width:10%;
 }
 
 .height_class {
     height:30px;
-    border-radius:15px;
-    border:1px solid #4B26C6;
-    padding-left:15px;
+    border:none;
+    border-bottom:1px solid #ff8f00;
+    padding-left:24px;
+    color:white;
+    background:rgb(20,20,20)
 }
+
+/*=====  End of A RANGER  ======*/
 
 
 /*=============================================
@@ -262,8 +301,19 @@ color:rgb(255,255,255,.5);
 #alert_box_home{
     width:60%;
     margin:5% auto 0 auto;
-    overflow:auto;
-    height:250px;
+    overflow:hidden;
+    text-align:center;
+    color:white;
+    height:265px;
+    animation:loop infinite 50s; 
+}
+
+@keyframes loop{
+    0% { transform: translateZ(0,0)}
+    100%{ transform: translateZ(-100%,0)}
+}
+#alert_box_home>p>a{
+    color:orange;
 }
 #form_search_bar{
     display:flex;
@@ -273,15 +323,20 @@ color:rgb(255,255,255,.5);
     height:200px;
     display:flex;
     justify-content: center;
-    background-image:url('../ressources/banner/banner.png');
-    background-size:cover;
+    background:linear-gradient(1.1turn,#ffb500,#ff8f00);
+    
     padding-top:130px;
+    box-shadow: 0 2px 2px -2px gray;
 }
 .search_bar{
     height:30px;
     width:100%;
     border-radius:15px;
     padding-left:10px;
+}
+.title_search{
+    color:#ff8f00;
+    text-align: center;
 }
 #submit_search_bar{
     height:30px;
@@ -309,6 +364,9 @@ color:rgb(255,255,255,.5);
     color:white;
     margin-left:5px;
     margin-top:2px;
+}
+.game_desc_text{
+    color:#ff8f00;
 }
 #part_01{
     width:100%;
@@ -350,6 +408,17 @@ color:rgb(255,255,255,.5);
 #part_04{
     width:100%;
     text-align: center;
+    background-color:rgb(20,20,20);
+}
+.top-oranged{
+    margin:1% auto 2% auto;
+    background-color:#ff8f00;
+    width:60%;
+}
+.bottom-oranged{
+    margin:1% auto 1% auto;
+    background-color:#ff8f00;
+    width:60%;
 }
 #card_handler{
     width:100%;
@@ -359,10 +428,10 @@ color:rgb(255,255,255,.5);
 }
 .style_link_leenk{
     text-decoration: none;
-    background-color:#4B26C6;
+    background-color:#ff8f00;
     color:white;
     padding:7px 7px;
-    border:1px solid #4B26C6;
+    box-shadow:0px 2px 1px black;
     border-radius:15px;
     margin-bottom:20px;
 }
@@ -370,6 +439,8 @@ color:rgb(255,255,255,.5);
     text-decoration: none;
     color:white;
     cursor: pointer;
+    background-color:#ff8f00;
+ 
 }
 .block_link_leenk{
     margin-bottom:20px;
@@ -381,166 +452,61 @@ color:rgb(255,255,255,.5);
 .card_leenk-effect {
     display: flex;
     flex-wrap:wrap;
+    justify-content: center;
+   
+    /* overflow:hidden; */
 
   }
-  
+
   .card_leenk {
     position: relative;
     overflow: hidden;
     width: 230px;
-    height:340px;
     margin-right:12.5px;
-    margin-left:25px;
+    margin-left:20px;
     margin-bottom:20px;
+    transition: transform .2s;
   }
   .card_leenk img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 200%;
-    max-height: 200%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  
-  .card_leenk__info {
-    position: absolute;
-    top: 7px;
-    left: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 2 * 7px);
-    height: calc(100% - 2 * 7px);
-    background-color: rgba(255, 255, 255, 0.7);
-    text-align: center;
-  }
-  
-  .card_leenk__header {
-    position: relative;
-    margin: 0 0 20px 0;
-    padding: 15px 0;
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .card_leenk__header:after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    height: 2px;
-    width: 100%;
-    content: '';
-    background-color: #8D909B;
-  }
-  
-  .card_leenk__links {
-    display: flex;
-  }
-  
-  .card_leenk__link-block {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-  }
-  .card_leenk__link-block:last-child {
-    margin-right: 0;
-  }
-  
-  .card_leenk__link {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    color: #101010;
-    text-decoration: none;
-    border-radius: 50%;
-  }
-  .card_leenk__link:hover{
-      text-decoration: none;
   }
 
+  .card_leenk:hover{
+      transform:scale(1.1);
+  }
+  .card_leenk:hover .card_leenk__link-block_left,  .card_leenk:hover .card_leenk__link-block_center, .card_leenk:hover .card_leenk__link-block_right{
+      animation:fadeIn 1.5s linear forwards;
+  }
+
+  .card_leenk__link-block_left{
+    position: absolute;
+    left: 20px;
+    bottom: 29px;
+    opacity:0;
+  }
+
+
+
+  .card_leenk__link-block_right{
+    position: absolute;
+    bottom:29px;
+    left: 170px;
+    opacity:0;
+  }
+  .card_leenk__link-block_center{
+    position: absolute;
+    bottom:31px;
+    left: 96px;
+    opacity:0;
+  }
+  
   .card_leenk_fas{
-      color:black;
+    font-size:30px;
+    color:#ff8f00;
   }
-  .card_leenk_fas_size{
-      font-size:24px;
-  }
-  .card_leenk_fas:hover{
-      color:black;
-      text-decoration: none;
-  }
-
-.card_leenk-hover .card_leenk__info {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 0;
-  }
-  .card_leenk-hover .card_leenk__header {
-    top: -10px;
-    opacity: 0;
-  }
-  .card_leenk-hover .card_leenk__header:after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  .card_leenk-hover .card_leenk__link-block {
-    top: 20px;
-    opacity: 0;
-  }
-  
-  .card_leenk-hover:hover .card_leenk__info {
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  .card_leenk-hover:hover .card_leenk__header {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0.45s;
-    top: 0;
-    opacity: 1;
-  }
-  .card_leenk-hover:hover .card_leenk__header:after {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.63, 0.01, 0, 1.39);
-    transition-delay: 0.65s;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  .card_leenk-hover:hover .card_leenk__link-block {
-    top: 0;
-    opacity: 1;
-  }
-  .card_leenk-hover:hover .card_leenk__link-block:first-child {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0.85s;
-  }
-  .card_leenk-hover:hover .card_leenk__link-block:nth-child(2) {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0.95s;
+  .show_link_cards{
+    display:block;
   }
   
 
@@ -620,30 +586,13 @@ color:rgb(255,255,255,.5);
     font-weight:bold;
     text-align: center;
 }
-#user_games{
-    width:100%;
-    margin:0 5% 3% auto;
-    border: 1px solid #4B26C6;
-    display:flex;
-    flex-wrap:wrap;
-}
-#user_fav_games{
-    width:100%;
-    margin:0 5% 3% auto;
-    border: 1px solid #4B26C6;
-    display:flex;
-    flex-wrap:wrap;
-}
+
 #title_game_box{
     font-weight:bold;
     width:100%;
-}
-#post_user{
-    width:59%;
-    border:1px solid #4B26C6;
-    margin-left:3%;
-    height:400px;
-    margin-right:3%;
+    text-align: center;
+    color:#ff8f00;
+  
 }
 #sidebar_right{
     border:1px solid #4B26C6;
@@ -675,9 +624,12 @@ color:rgb(255,255,255,.5);
     width:75%;
     margin:1% auto 0 auto;
 }
+.game_desc_text{
+    width:60%;
+}
 #who_plays_it_box{
     width:80%;
-    border: 1px solid #4B26C6;
+
     margin:0 auto 5% auto;
     display:flex;
     flex-wrap:wrap;
@@ -685,6 +637,12 @@ color:rgb(255,255,255,.5);
 #title_WPI{
     font-size:20px;
     width:100%;
+    text-align:center;
+}
+.box_WPI_player{
+    width:100%;
+    display:flex;
+    justify-content: center;
 }
 #btn_add_game_view{
     display:block;
@@ -693,12 +651,15 @@ color:rgb(255,255,255,.5);
     padding-left:1%;
 }
 #who_plays_it{
-    width:15%;
-    border: 1px solid #4B26C6;
+    width:130px;
+    border: 1px solid #ff8f00;
     padding:5px 5px;
     margin:0 5px 10px 5px;
     text-align: center;
     text-decoration:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 /* ===================== END GAME VIEW STYLE ======================== */
 
@@ -744,9 +705,12 @@ footer{
     flex-wrap:wrap;
     width:100%;
     text-align: center;
+    background:rgb(20,20,20);
+    justify-content:center;
 }
 #title_game_list{
     width:100%;
+    color:#ff8f00
 }
 
 @media screen and (min-width: 1200px) and (max-width: 2000px){
@@ -761,7 +725,13 @@ footer{
     #nav_bar_index_responsive{
         display:block;
     }
-
+    #nav_bar_preindex{
+        display:none;
+    }
+    #nav_bar_preindex_responsive{
+        display:block;
+    }
+   
 }
 
 
@@ -772,6 +742,16 @@ footer{
     #nav_bar_index_responsive{
         display:block;
     }
+    #nav_bar_preindex{
+        display:none;
+    }
+    #nav_bar_preindex_responsive{
+        display:block;
+    }
+    .login_form{
+        width:35%;
+    }
+ 
 }  
 
 
@@ -782,6 +762,24 @@ footer{
     #nav_bar_index_responsive{
         display:block;
     }
+    #nav_bar_preindex{
+        display:none;
+    }
+    #nav_bar_preindex_responsive{
+        display:block;
+    }
+    .login_form{
+        width:75%;
+    }
+    .game_desc_text{
+        width:100%;
+    }
+    .second_submit{
+        width:20%;
+    }
+    .border_form{
+        border:none;
+    }
 }  
 
 
@@ -791,6 +789,24 @@ footer{
     }
     #nav_bar_index_responsive{
         display:block;
+    }
+    #nav_bar_preindex{
+        display:none;
+    }
+    #nav_bar_preindex_responsive{
+        display:block;
+    }
+    .login_form{
+        width:100%;
+    }
+    .game_desc_text{
+        width:100%;
+    }
+    .second_submit{
+        width:35%;
+    }
+    .border_form{
+        border:none;
     }
 }  
 
@@ -803,8 +819,313 @@ footer{
     #nav_bar_index_responsive{
         display:block;
     }
+    #nav_bar_preindex{
+        display:none;
+    }
+    #nav_bar_preindex_responsive{
+        display:block;
+    }
+    .login_form{
+        width:100%;
+    }
+    .game_desc_text{
+        width:100%;
+    }
+    .second_submit{
+        width:35%;
+    }
+    .border_form{
+        border:none;
+    }
 }   
 
  
+
+/*=============================================
+=            Reformatage style Leenk            =
+=============================================*/
+
+
+
+
+/*----------  Profil Page  ----------*/
+.title_profil_page{
+    width:100%;
+    text-align: center;
+}
+.sides{
+    height:70vh;
+}
+.bg_profil_user{
+    background-image:url('../ressources/banner_profil/bg3.jpg');
+    background-size:cover;
+
+}
+.edit_background{
+    display:flex;
+    justify-content: end;
+    height:45px;
+}
+#edit_bg{
+    padding: 10px 10px;
+    background-image:url('../ressources/image/backgroundprofilu.png');
+    border: 1px solid orange;
+    border-radius: 0 0 0 15px;
+}
+.picto_edit_bg{
+
+    font-size: 18px;
+
+    color: #ff8f00;
+}
+.picto_edit_bg:hover{
+    color: #ff8f00;
+    text-decoration:none;
+}
+.modal-dialog{
+    margin:10% auto; 
+}
+.modal-content{
+    background-color:black;
+    border:1px solid #ff8f00;
+    color:white;
+}
+.modal-picture-preview{
+    background:blue;
+    margin-bottom:1%;
+}
+.modal-body{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    width:95%;
+    margin:0 auto;
+}
+
+.modal-picture-preview:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+}
+.close{
+    color:#ff8f00;
+    opacity:1;
+}
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
+    color:#ff8f00;
+    opacity:1;
+}
+.active-bg{
+    border:2px solid #ff8f00;
+}
+/*----------  Top left  ----------*/
+
+
+.profil_top_left{
+text-align: center;
+}
+.profil_user{
+    width:60%;
+
+    
+}
+.link_leenk_profil{
+    color:#ff8f00;
+    font-size:3rem;
+    margin-left:3%;
+}
+
+.link_leenk_profil:hover{
+    color:white;
+    text-decoration: none;
+}
+.title_nickname_user{
+    font-weight:bold;
+    font-size:24px;
+    color:#ff8f00;
+}
+.style_hr{
+    width:60%;
+    margin:0 auto;
+    background-color:#ff8f00;
+}
+.box_link_user{
+    display:flex;
+    height:80px;
+    justify-content: center;
+    align-items: center;
+}
+.bg_user_sides{
+    background-image:url('../ressources/image/backgroundprofilu.png');
+    background-size:cover;
+    border-radius:15px 0px 15px 0px;
+    color:white;
+    border: 1px solid  #ff8f00;
+    margin:3% auto 1% auto;
+}
+
+.update_profil_btn_01{
+    color:white;
+    text-shadow:1px 1px 0px black;
+    background-image:url('../ressources/image/backgroundprofilu.png');
+    background-size:cover;
+    width:150px;
+    height:55px;
+    display:block;
+    margin:0 auto;
+    border:1px solid #ff8f00;
+}
+.update_profil_btn_01:hover{
+    color:#ff8f00;
+    text-decoration:none;
+    transform:translateX(-1px)translateY(-1px);
+    box-shadow:2px 2px 3px black;
+}
+/*----------  Top right  ----------*/
+.profil_top_right{
  
+}
+.title_desc_profil{
+    font-weight:bold;
+    font-size:24px;
+    color:#ff8f00;
+    margin-bottom:0;
+}
+.hr_profil_right{
+    width:25%;
+    background-color:#ff8f00;
+
+    margin-top:1%;
+}
+.post_user{
   
+    padding:5% 5%;
+    height:60%;
+    width:60%;
+
+}
+#box_alert_user{
+    color:white;
+    text-shadow:1px 1px 0px black;
+    background-image:url('../ressources/image/backgroundprofilu.png');
+    background-size:cover;
+    width:35%;
+
+    display:block;
+    margin:0 auto;
+    border:1px solid #ff8f00;
+    text-align:center;
+}
+#box_alert_user>a{
+    color:#ff8f00;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size:18px;
+}
+
+#box_alert_user:hover{
+    color:#ff8f00;
+    text-decoration:none;
+    transform:translateX(-1px)translateY(-1px);
+    box-shadow:2px 2px 3px black;
+}
+/*----------  Bottom  ----------*/
+.profil_bottom{
+ 
+}
+
+
+.user_games{
+    width: 100%;
+    margin: 0 5% 3% auto;
+    padding:1% 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*=====  End of Reformatage style Leenk  ======*/
+
+
+.updatedPwd{
+    text-align:center;
+    color:rgb(10,220,10);
+    font-weight:bold;
+    background-color:linear-gradient(1.1turn,#ffb500,#ff8f00);
+}
+
+
+
+/*=============================================
+=            Subscribe Form            =
+=============================================*/
+.form_leenk{
+    width:100%;
+    display:flex;
+}
+.form_style_subscribe {
+    background:rgb(20,20,20);
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align: center;
+}
+.form_subscribe_part{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:#ff8f00;
+}
+.sides_form>p{
+    color:#ff8f00;
+    width:100%;
+    height:40px;
+}
+.input_form{
+    width:51%;
+}
+.sides_form{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    width:50%;
+    padding-top:40px;
+}
+.radio_form_subscribe{
+    width:15%;
+}
+
+.container-fluid{
+ padding:0;
+}
+.popUp_steam_info{
+    visibility: hidden;
+    width: 600px;
+    background:linear-gradient(1.1turn,#ffb500,#ff8f00);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: -300px;
+    top:-40px;
+}
+.show_popUp{
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+/*=====  End of Subscribe Form  ======*/
+
+

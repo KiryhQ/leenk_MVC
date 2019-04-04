@@ -30,31 +30,14 @@
 
   </div>
 </div>
-
-    <div id="part_02">
-        <p id="text_part02">"Une plateforme qui nous relie"</p>
-    </div>
-
-    <div id="part_03">
-        <div id="img_part03">
-            <img id="animate_sphone" src="./public/ressources/image/smart.png" alt="smartphone + logo" />
-        </div>
-        <div id="text_part03">
-            <p id="animated_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur ipsa ducimus possimus quaerat laborum tempora, culpa soluta sunt recusandae,
-                distinctio rem voluptates voluptatibus quasi quas! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Officia, ratione.</p>
-        </div>
-      
-    </div>
     <div id="part_04"> 
             
 
 
                 <div class="content-block__effect">
-      <h2>Et vous, à quoi jouez vous ?</h2>
-
-        <div class="card_leenk-effect">
+      <h2 style="color:#ff8f00">Et vous, à quoi jouez vous ?</h2>
+      <hr class="top-oranged" >
+        <div class="card_leenk-effect animation-card">
 
         <?php while($donnees= $req->fetch()){
 
@@ -64,23 +47,23 @@
             <img class="card_leenk__image" src="<?= $donnees['url_image_game'] ?>" alt="Portfolio Item" width="826" height="551">
      
                <div class="card_leenk__info">
-     
-                 <h3 class="card_leenk__header"><?=$donnees['name_game']?></h3>
                  
                  <div class="card_leenk__links">
-                   
-                   <div class="card_leenk__link-block">
+              <?php if(isset($_SESSION['user'])){
+                ?>
+            
+                   <div class="card_leenk__link-block_left">
                      
-                     <a class="card_leenk__link" href="index.php?action=addGameToUser&id_game=<?= $donnees['id_game']?>" title="Link Title">
+                     <a class="card_leenk__link" href="index.php?action=addGameToUser&id_game=<?= $donnees['id_game']?>" title="Ajouter <?=$donnees['name_game']?>">
                        <i class="fas fa-plus-circle card_leenk_fas card_leenk_fas_size"></i>
                      
                      </a>
                      
                    </div>
-                   
-                   <div class="card_leenk__link-block">
+              <?php } ?>
+                   <div class="card_leenk__link-block_right">
                      
-                     <a class="card_leenk__link" href="index.php?action=viewGame&id_game=<?=$donnees['id_game']?>&title_game=<?=$donnees['name_game']?>" title="Link Title">
+                     <a class="card_leenk__link" href="index.php?action=viewGame&id_game=<?=$donnees['id_game']?>&title_game=<?=$donnees['name_game']?>" title="En savoir plus sur <?= $donnees['name_game']?>">
                      <i class="fas fa-search card_leenk_fas"></i>
                        
                      </a>
@@ -99,13 +82,19 @@ $req->closeCursor(); ?>
     
 
       </div>
-
+  <hr class="bottom-oranged">
   <div class="block_link_leenk"><a href="index.php?action=checkGamesList" class="style_link_leenk"> Voir plus !</a></div>
 
 
+<script>
 
 
-        <script>
+//  attempting to autoscroll box
+  // $(function () {
+  //           $("#alert_box_home").scrollTop(10000) 
+          
+  //       });
+        
     function indexAnimation() {
 
 
